@@ -3,15 +3,48 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  font-family: var(--inter);
 }
 
 /* --------------- ROOT --------------- */
 :root {
-  /* font */
+  /* font type */
   --inter: "Inter", serif;
+
+  /* font size */
+  --title-size: 18px;
+  --content-size: 14px;
+
+  /* font weight */
+  --title-weight: 600;
+  --content-weight: 400;
 
   /* color scheme */
   --main-color: #01B0D3;
   --content-color: #242332;
   --border-color: #90949C;
+}
+
+/* --------------- HEADER --------------- */
+#header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+/* site name */
+#siteName a {
+  font-size: 28px;
+  font-weight: var(--title-weight);
+  text-decoration-line: none;
+  color: var(--content-color);
+}
+/* my account link */
+#tools a {
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+  text-decoration-line: none;
+  color: var(--content-color);
 }

@@ -48,3 +48,24 @@
   text-decoration-line: none;
   color: var(--content-color);
 }
+
+/* --------------- NAVIGATION --------------- */
+#nav {
+  width: 100%;
+  background-color: var(--content-color);
+}
+/* list */
+#navList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+}
+/* items */
+.navItems {
+  color: #fff;
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+}

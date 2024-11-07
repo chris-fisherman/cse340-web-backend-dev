@@ -69,3 +69,15 @@
   font-size: var(--content-size);
   font-weight: var(--content-weight);
 }
+
+/* --------------- FOOTER --------------- */
+#footer {
+  width: 100%;
+  padding: 20px 0;
+}
+/* copyright */
+#copyright {
+  margin: 0;
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+}

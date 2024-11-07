@@ -4,3 +4,8 @@
 *:after {
   box-sizing: border-box;
 }
+
+/* --------------- ROOT --------------- */
+:root {
+  --inter: "Inter", serif;
+}

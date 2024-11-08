@@ -165,3 +165,8 @@
   font-size: var(--content-size);
   font-weight: var(--content-weight);
 }
+/* author name */
+#authorName {
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+}

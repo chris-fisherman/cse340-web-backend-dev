@@ -119,6 +119,27 @@
   font-weight: var(--content-weight);
   margin: 10px 0;
 }
+/* upgrades section */
+#upgrades {
+  width: 100%;
+  margin: 30px 0;
+}
+#upgrades h1 {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+}
+.upgradesItems p {
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+}
+.upgradesImgContainer {
+  background-color: var(--main-color);
+  border: solid 2px var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+}
 
 /* --------------- FOOTER --------------- */
 #footer {

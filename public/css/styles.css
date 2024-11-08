@@ -12,7 +12,7 @@
   --inter: "Inter", serif;
 
   /* font size */
-  --title-size: 18px;
+  --title-size: 20px;
   --content-size: 14px;
 
   /* font weight */
@@ -68,6 +68,39 @@
   color: #fff;
   font-size: var(--content-size);
   font-weight: var(--content-weight);
+}
+
+/* --------------- BODY - INDEX --------------- */
+/* banner section */
+#banner {
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+#banner h1 {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+}
+#bannerContainer {
+  position: relative;
+  text-align: end;
+}
+#bannerText {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  text-align: start;
+  color: var(--main-color);
+  background-color: #ffffff9d;
+}
+#bannerText h2 {
+  font-size: 16px;
+  font-weight: var(--title-weight);
+  margin: 2px 0;
+}
+#bannerText p {
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+  margin: 2px 0;
 }
 
 /* --------------- FOOTER --------------- */

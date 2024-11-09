@@ -211,6 +211,7 @@
   #bannerContainer {
     width: 90%;
     margin: 0 auto;
+    text-align: center;
   }
   #bannerText h2 {
     font-size: 24px;

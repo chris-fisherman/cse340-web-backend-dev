@@ -70,7 +70,7 @@
   font-weight: var(--content-weight);
 }
 
-/* --------------- BODY - INDEX --------------- */
+/* --------------- MAIN - INDEX --------------- */
 /* banner section */
 #banner {
   width: 100%;
@@ -169,4 +169,21 @@
 #authorName {
   font-size: var(--content-size);
   font-weight: var(--content-weight);
+}
+
+/*************** MEDIA QUERIES ***************/
+@media (min-width: 700px) {
+  body {
+    width: 70%;
+    margin: 10px auto;
+    border: solid 5px var(--main-color);
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    width: 770px;
+  }
 }

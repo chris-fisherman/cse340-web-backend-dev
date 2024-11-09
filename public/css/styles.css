@@ -173,17 +173,86 @@
 
 /*************** MEDIA QUERIES ***************/
 @media (min-width: 700px) {
+  /* ROOT */
+  :root {
+    --title-size: 24px;
+    --content-size: 16px;
+  }
+
+  /* HTML */
+  html {
+    background-image: url(../images/site/small_check.jpg);
+  }
+
+  /* BODY */
   body {
     width: 70%;
+    background-color: #fff;
     margin: 10px auto;
     border: solid 5px var(--main-color);
     border-radius: 10px;
     padding: 10px;
   }
+
+  /* HEADER */
+  #siteName a {
+    font-size: 32px;
+  }
+
+  /* NAVIGATION */
+  #navList {
+    padding: 16px 100px;
+  }
+
+  /* BANNER */
+  #banner h1 {
+    font-size: 28px;
+  }
+  #bannerContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #bannerText h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  #bannerText p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  #bannerText img {
+    width: 150px;
+    margin: 20px 0;
+  }
+
+  /* SECTIONS */
+  #sectionsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  #reviews, #upgrades {
+    margin-top: 0;
+  } 
+  #reviews {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .reviewsItems {
+    margin: 20px 0;
+  }
+  #upgrades {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 @media (min-width: 1200px) {
   body {
-    width: 770px;
+    width: 800px;
   }
 }

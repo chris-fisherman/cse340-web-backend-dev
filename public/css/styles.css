@@ -69,6 +69,14 @@
   font-size: var(--content-size);
   font-weight: var(--content-weight);
 }
+/* links */
+.navLinks {
+  color: #fff;
+  text-decoration-line: none;
+}
+.navLinks:hover {
+  text-decoration-line: underline;
+}
 
 /* --------------- MAIN - INDEX --------------- */
 /* banner section */

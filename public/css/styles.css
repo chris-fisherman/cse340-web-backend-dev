@@ -162,6 +162,52 @@
   height: auto;
 }
 
+/* --------------- INVENTORY --------------- */
+#invTitle {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  margin-top: 30px;
+}
+#inv-display {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  margin: 20px auto 30px auto;
+}
+.invItems {
+  border: solid 1px var(--border-color);
+  border-radius: 8px;
+  max-width: 200px;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 140px));
+  height: auto;
+}
+.invImg {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+.namePrice {
+  text-align: center;
+}
+.namePrice h2 {
+  margin-bottom: 0;
+  margin: 8px 5px 0 5px;
+}
+.invLine {
+  border: solid 2px var(--content-color);
+}
+.invNameLink {
+  font-size: var(--content-size);
+  font-weight: var(--title-weight);
+  text-align: center;
+}
+.invPrice {
+  margin-top: 8px;
+}
+
 /* --------------- FOOTER --------------- */
 #footer {
   width: 100%;
@@ -258,6 +304,16 @@
     grid-row-start: 1;
     grid-row-end: 2;
   }
+}
+
+/* INVENTORY */
+#invTitle {
+  font-size: 28px;
+  font-weight: var(--title-weight);
+  margin-top: 30px;
+}
+#inv-display {
+  width: 95%;
 }
 
 @media (min-width: 1200px) {

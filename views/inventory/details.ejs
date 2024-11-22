@@ -1,0 +1,9 @@
+<% if (title) { %>
+    <h1 id="detTitle"><%= title %></h1>
+<% } else {
+    res.redirect('/')
+} %>
+
+<%# messages() %>
+
+<%- grid %>

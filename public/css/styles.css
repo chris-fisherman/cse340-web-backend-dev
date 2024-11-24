@@ -206,6 +206,36 @@
 }
 .invPrice {
   margin-top: 8px;
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+}
+
+/* --------------- DETAILS --------------- */
+#detTitle {
+  font-size: 20px;
+  font-weight: var(--title-weight);
+  margin-top: 30px;
+}
+#detailContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+.detImg {
+  width: 100%;
+}
+.namePriceDescription h2 {
+  font-size: var(--content-size);
+}
+.detPrice, .detColor {
+  background-color: rgb(236, 236, 236);
+}
+.detPrice, .detColor, .detDesc, .detMiles {
+  padding: 15px 20px;
+  margin: 0;
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
 }
 
 /* --------------- FOOTER --------------- */
@@ -304,16 +334,23 @@
     grid-row-start: 1;
     grid-row-end: 2;
   }
-}
 
-/* INVENTORY */
-#invTitle {
-  font-size: 28px;
-  font-weight: var(--title-weight);
-  margin-top: 30px;
-}
-#inv-display {
-  width: 95%;
+  /* INVENTORY */
+  #invTitle {
+    font-size: 28px;
+  }
+  #inv-display {
+    width: 95%;
+  }
+
+  /* DETAILS */
+  #detTitle {
+    font-size: 28px;
+  }
+  .namePriceDescription h2 {
+    margin-top: 0;
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1200px) {

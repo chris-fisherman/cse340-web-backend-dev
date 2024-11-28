@@ -238,6 +238,69 @@
   font-weight: var(--content-weight);
 }
 
+/* --------------- FORM --------------- */
+#loginTitle {
+  font-size: 20px;
+  font-weight: var(--title-weight);
+  margin-top: 30px;
+}
+#formLogin {
+  background-color: #32475C;
+  max-width: 400px;
+  padding: 20px 50px;
+  border: solid 1.5px #abacaf;
+  border-radius: 10px;
+  color: #fff;
+  text-align: start;
+  gap: 20px;
+  margin: 30px 0;
+}
+#formLogin label, #formLogin input {
+  width: 100%;
+  margin: 10px 0;
+}
+#formLogin label {
+  font-size: var(--content-size);
+  font-weight: var(--title-weight);
+}
+#formLogin input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+}
+input#pwd {
+  margin-bottom: 0;
+}
+#loginBtnContainer {
+  width: 100%;
+  text-align: center;
+}
+input#loginInput {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 5px 30px;
+  border: none;
+  border-radius: 100px;
+  color: var(--content-color);
+  font-size: var(--content-size);
+  font-weight: 500;
+  cursor: pointer;
+}
+input#loginInput:hover {
+  background-color:#777a7c;
+  color:aliceblue;
+}
+#loginBtnContainer p {
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
+}
+#signUp {
+  color: #fff;
+}
+#signUp:hover {
+  color: var(--main-color);
+}
+
 /* --------------- FOOTER --------------- */
 #footer {
   width: 100%;
@@ -350,6 +413,14 @@
   .namePriceDescription h2 {
     margin-top: 0;
     font-size: 22px;
+  }
+
+  /* FORM */
+  #loginTitle {
+    font-size: 28px;
+  }
+  input#loginInput {
+    font-size: 14px;
   }
 }
 

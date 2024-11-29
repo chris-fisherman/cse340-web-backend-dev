@@ -89,27 +89,6 @@ Util.buildDetailGrid = async function(data){
     return grid
 }
 
-/* ************************
- * Constructs the nav HTML unordered list
- ************************** */
-Util.getLogin = async function (req, res, next) {
-    let form = '<form id="formLogin" action="#">'
-
-        form += '<label for="email">Email:</label><br>'
-        form += '<input type="email" id="email" name="email"><br>'
-
-        form += '<label for="pwd">Password:</label><br>'
-        form += '<input type="password" id="pwd" name="pwd"><br><br>'
-        form += '<div id="loginBtnContainer">'
-            form += '<input id="loginInput" type="submit" value="LOGIN">'
-            form += '<p>No account? <a id="signUp" href="#" title="Click to Sign Up">Sign-up</a></p>'
-        form += '</div>'
-
-    form += '</form>'
-
-    return form
-}
-
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 

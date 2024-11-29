@@ -1,0 +1,29 @@
+<% if (title) { %>
+    <h1 id="registerTitle"><%= title %></h1>
+
+    <form id="formRegister" action="#">
+        <label for="account_firstname">First name:</label><br>
+        <input type="text" id="account_firstname" name="account_firstname" required><br>
+
+        <label for="account_lastname">Last name:</label><br>
+        <input type="text" id="account_lastname" name="account_lastname" required><br>
+
+        <label for="account_email">Email:</label><br>
+        <input type="email" id="account_email" name="account_email" required><br>
+        
+        <label for="account_password">Password:</label><br>
+        <div id="pwdPosition">
+            <input type="password" id="account_password" name="account_password" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[\(@\)!%*?&]).{12,}" required><br><br>
+
+            <span id="pwdBtn">Show</span>
+        </div>
+
+        <div id="registerBtnContainer">
+            <input id="registerInput" type="submit" value="REGISTER">
+        </div>
+    </form>
+<% } else {
+    res.redirect('/')
+} %>
+
+<%- messages() %>

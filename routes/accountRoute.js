@@ -5,8 +5,9 @@ const utilities = require("../utilities/")
 const accountController = require("../controllers/accountController")
 
 // My account route
-router.get("/login", accountController.buildLogin);
+router.get("/login", utilities.handleErrors(accountController.buildLogin));
 
-router.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
+// Register route
+router.get("/register", utilities.handleErrors(accountController.buildRegister));
 
 module.exports = router;

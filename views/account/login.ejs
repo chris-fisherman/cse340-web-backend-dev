@@ -1,9 +1,25 @@
 <% if (title) { %>
     <h1 id="loginTitle"><%= title %></h1>
+
+    <form id="formLogin" action="#">
+        <label for="account_email">Email:</label><br>
+        <input type="email" id="account_email" name="account_email"><br>
+
+        <label for="account_password">Password:</label><br>
+        <div id="pwdPosition">
+            <input type="password" id="account_password" name="account_password"><br><br>
+            <span id="pwdBtn">
+                Show
+            </span>
+        </div>
+        
+        <div id="loginBtnContainer">
+            <input id="loginInput" type="submit" value="LOGIN">
+            <p>No account? <a id="signUp" href="/account/register" title="Click to Sign Up">Sign-up</a></p>
+        </div>
+    </form>
 <% } else {
     res.redirect('/')
 } %>
 
 <%- messages() %>
-
-<%- formLogin %>

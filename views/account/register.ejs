@@ -1,7 +1,7 @@
 <% if (title) { %>
     <h1 id="registerTitle"><%= title %></h1>
 
-    <form id="formRegister" action="#">
+    <form id="formRegister" action="/account/register" method="post">
         <label for="account_firstname">First name:</label><br>
         <input type="text" id="account_firstname" name="account_firstname" required><br>
 

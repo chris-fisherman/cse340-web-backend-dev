@@ -321,6 +321,9 @@ input#account_password {
 #pwdBtn:hover {
   cursor: pointer;
 }
+#pwdRequire {
+  margin-top: 0;
+}
 
 /* --------------- FOOTER --------------- */
 #footer {

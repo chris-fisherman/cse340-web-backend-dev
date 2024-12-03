@@ -13,13 +13,13 @@
 
     <form id="formRegister" action="/account/register" method="post">
         <label for="account_firstname">First name:</label><br>
-        <input type="text" id="account_firstname" name="account_firstname" required><br>
+        <input type="text" id="account_firstname" name="account_firstname" required value="<%= locals.account_firstname %>"><br>
 
         <label for="account_lastname">Last name:</label><br>
-        <input type="text" id="account_lastname" name="account_lastname" required><br>
+        <input type="text" id="account_lastname" name="account_lastname" required value="<%= locals.account_lastname %>"><br>
 
         <label for="account_email">Email:</label><br>
-        <input type="email" id="account_email" name="account_email" required><br>
+        <input type="email" id="account_email" name="account_email" required value="<%= locals.account_email %>"><br>
         
         <label for="account_password">Password:</label><br>
         <div id="pwdPosition">

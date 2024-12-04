@@ -3,6 +3,7 @@ const express = require("express")
 const router = new express.Router() 
 const invController = require("../controllers/invController")
 const utilities = require("../utilities/")
+const classificationValidate = require('../utilities/newClassification-validation')
 
 // Route to build management view
 router.get("/", utilities.handleErrors(invController.buildManageInv));
@@ -18,6 +19,8 @@ router.get("/new-class", utilities.handleErrors(invController.buildAddClassifica
 // post
 router.post(
     "/new-class",
+    classificationValidate.classificationRules(),
+    classificationValidate.checkClassData,
     utilities.handleErrors(invController.registerNewClassification)
 );
 

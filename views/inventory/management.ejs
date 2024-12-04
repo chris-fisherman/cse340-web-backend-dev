@@ -1,6 +1,8 @@
 <% if (title) { %>
     <h1 id="managementTitle"><%= title %></h1>
 
+    <%- messages() %>
+
     <ul id="managementList">
         <li class="managementItems"><a class="managementLinks" href="/inv/new-class">Add new classification</a></li>
         <li class="managementItems"><a class="managementLinks" href="/inv/new-inv">Add new inventory</a></li>
@@ -8,7 +10,5 @@
 <% } else {
     res.redirect('/')
 } %>
-
-<%- messages() %>
 
 <%# grid %>

@@ -3,14 +3,6 @@
 
     <%- messages() %>
 
-    <% if (errors) { %>
-        <ul class="notice">
-            <% errors.array().forEach(error => { %>
-            <li><%= error.msg %></li>
-            <%  }) %>
-       </ul>
-    <% } %>
-
     <form id="formLogin" action="/account/login" method="post">
         <label for="account_email">Email:</label><br>
         <input type="email" id="account_email" name="account_email" required value="<%= locals.account_email %>"><br>

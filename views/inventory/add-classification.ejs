@@ -3,9 +3,17 @@
 
     <%- messages() %>
 
+    <% if (errors) { %>
+        <ul class="notice">
+       <% errors.array().forEach(error => { %>
+         <li><%= error.msg %></li>
+      <%  }) %>
+       </ul>
+      <% } %>
+
     <form id="addClassificationForm" action="/inv/new-class" method="post">
         <label for="classification_name">Classification name:</label><br>
-        <input type="text" id="class_name" name="classification_name" required pattern="[^' ']+[a-zA-Z]+"><br>
+        <input type="text" id="class_name" name="classification_name" required pattern="[^' ']+[a-zA-Z]+" value="<%= locals.classification_name %>"><br>
 
         <p id="addClassificationParagraph">Name must be alphabetic characters only.</p>
         

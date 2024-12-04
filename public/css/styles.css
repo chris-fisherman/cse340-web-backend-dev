@@ -332,6 +332,19 @@ input#account_password {
   font-style: italic;
 }
 
+/* --------------- VEHICLE MANAGEMENT --------------- */
+#managementTitle {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  margin-top: 30px;
+}
+#managementList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 /* --------------- FOOTER --------------- */
 #footer {
   width: 100%;
@@ -455,6 +468,11 @@ input#account_password {
   }
   input#loginInput, input#registerInput {
     font-size: 14px;
+  }
+
+  /* VEHICLE MANAGEMENT */
+  #managementTitle {
+    font-size: 28px;
   }
 }
 

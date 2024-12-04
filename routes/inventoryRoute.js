@@ -13,4 +13,12 @@ router.get("/type/:classificationId", utilities.handleErrors(invController.build
 // Route to build car detail
 router.get("/detail/:invId", utilities.handleErrors(invController.buildDetailsByInvId));
 
+// Add classification route
+router.get("/new-class", utilities.handleErrors(invController.buildAddClassification));
+// post
+router.post(
+    "/new-class",
+    utilities.handleErrors(invController.registerNewClassification)
+);
+
 module.exports = router;

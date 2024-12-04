@@ -4,6 +4,17 @@ const utilities = require("../utilities/")
 const invCont = {}
 
 /* ***************************
+ *  Build Management Inventory
+ * ************************** */
+invCont.buildManageInv = async function (req, res, next) {
+    let nav = await utilities.getNav()
+    res.render("./inventory/management", {
+        title: "Vehicle Management",
+        nav,
+    })
+}
+
+/* ***************************
  *  Build inventory by classification view
  * ************************** */
 invCont.buildByClassificationId = async function (req, res, next) {

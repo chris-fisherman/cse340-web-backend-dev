@@ -11,6 +11,7 @@ invCont.buildManageInv = async function (req, res, next) {
     res.render("./inventory/management", {
         title: "Vehicle Management",
         nav,
+        errors: null,
     })
 }
 
@@ -22,6 +23,7 @@ invCont.buildAddClassification = async function (req, res, next) {
     res.render("./inventory/add-classification", {
         title: "Add Classification",
         nav,
+        errors: null,
     })
 }
 

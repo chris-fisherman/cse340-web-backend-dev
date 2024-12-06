@@ -52,6 +52,50 @@ invCont.registerNewClassification = async function (req, res, next) {
     }
   }
 
+/* ****************************************
+*  Process New Inventory
+* *************************************** */
+invCont.registerNewInventory = async function (req, res, next) {
+  const { inv_make,
+    inv_model,
+    inv_year,
+    inv_description,
+    inv_image,
+    inv_thumbnail,
+    inv_price,
+    inv_miles,
+    inv_color,
+    classification_id } = req.body
+  
+  const newInvResult = await invModel.insertInventory(
+    inv_make,
+    inv_model,
+    inv_year,
+    inv_description,
+    inv_image,
+    inv_thumbnail,
+    inv_price,
+    inv_miles,
+    inv_color,
+    classification_id
+  )
+
+  if (newInvResult) {
+    req.flash(
+      "notice",
+      `Congratulations! The new inventory was successfully added.`
+    )
+    return res.redirect("/inv/")
+  } else {
+    req.flash("notice", "Sorry, the adition failed.")
+    res.status(501).render("inventory/add-inventory", {
+      title: "Add Inventory",
+      nav,
+      selectList,
+    })
+  }
+}
+
 /* ***************************
  *  Build Add Inventory
  * ************************** */

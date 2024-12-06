@@ -5,6 +5,14 @@
 
     <%- messages() %>
 
+    <% if (errors) { %>
+        <ul class="notice">
+       <% errors.array().forEach(error => { %>
+         <li><%= error.msg %></li>
+      <%  }) %>
+       </ul>
+      <% } %>
+
     <form id="addInventoryForm" action="/inv/add-inventory" method="post">
 
         <p id="addInventoryParagraph">All fields are required.</p>
@@ -30,7 +38,7 @@
         <input type="text" id="inv_image" name="inv_image" required value="/images/vehicles/no-image.png"><br>
 
         <!-- Thumbnail Path -->
-        <label for="inv_thumbnail">Image Path:</label><br>
+        <label for="inv_thumbnail">Thumbnail Path:</label><br>
         <input type="text" id="inv_thumbnail" name="inv_thumbnail" required value="/images/vehicles/no-image-tn.png"><br>
 
         <!-- Price -->

@@ -24,4 +24,7 @@ router.post(
     utilities.handleErrors(invController.registerNewClassification)
 );
 
+// Add inventory route
+router.get("/add-inventory", utilities.handleErrors(invController.buildAddInventory));
+
 module.exports = router;

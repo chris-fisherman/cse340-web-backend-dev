@@ -1,0 +1,60 @@
+<%# const invModel = require("../models/inventory-model") %>
+
+<% if (title) { %>
+    <h1 id="addInventoryTitle"><%= title %></h1>
+
+    <%- messages() %>
+
+    <form id="addInventoryForm" action="/inv/add-inventory" method="post">
+
+        <p id="addInventoryParagraph">All fields are required.</p>
+
+        <!-- Classification select -->
+        <label for="classification_id">Classification:</label><br>
+        <%- selectList %><br>
+
+        <!-- Make -->
+        <label for="inv_make">Make:</label><br>
+        <input type="text" id="inv_make" name="inv_make" required minlength="3" value="<%= locals.inv_make %>" placeholder="Min of 3 characters"><br>
+
+        <!-- Model -->
+        <label for="inv_model">Model:</label><br>
+        <input type="text" id="inv_model" name="inv_model" required minlength="3" value="<%= locals.inv_model %>" placeholder="Min of 3 characters"><br>
+
+        <!-- Description -->
+        <label for="inv_description">Description:</label><br>
+        <textarea id="inv_description" name="inv_description" required value="<%= locals.inv_description %>"></textarea><br>
+
+        <!-- Image Path -->
+        <label for="inv_image">Image Path:</label><br>
+        <input type="text" id="inv_image" name="inv_image" required value="/images/vehicles/no-image.png"><br>
+
+        <!-- Thumbnail Path -->
+        <label for="inv_thumbnail">Image Path:</label><br>
+        <input type="text" id="inv_thumbnail" name="inv_thumbnail" required value="/images/vehicles/no-image-tn.png"><br>
+
+        <!-- Price -->
+        <label for="inv_price">Price:</label><br>
+        <input type="number" id="inv_price" name="inv_price" required step="any" value="<%= locals.inv_price %>" placeholder="Decimal or integer"><br>
+
+        <!-- Year -->
+        <label for="inv_year">Year:</label><br>
+        <input type="number" id="inv_year" name="inv_year" required minlength="4" value="<%= locals.inv_year %>" placeholder="4-digit-year"><br>
+
+        <!-- Miles -->
+        <label for="inv_miles">Miles:</label><br>
+        <input type="number" id="inv_miles" name="inv_miles" required minlength="4" value="<%= locals.inv_miles %>" placeholder="Digits only"><br>
+
+        <!-- Color -->
+        <label for="inv_color">Color:</label><br>
+        <input type="text" id="inv_color" name="inv_color" required minlength="3" value="<%= locals.inv_color %>"><br>
+        
+        <!-- SUBMIT -->
+        <div id="loginBtnContainer">
+            <input id="loginInput" type="submit" value="Add Vehicle">
+        </div>
+
+    </form>
+<% } else {
+    res.redirect('/')
+} %>

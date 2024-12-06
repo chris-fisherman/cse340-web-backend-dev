@@ -53,6 +53,20 @@ invCont.registerNewClassification = async function (req, res, next) {
   }
 
 /* ***************************
+ *  Build Add Inventory
+ * ************************** */
+invCont.buildAddInventory = async function (req, res, next) {
+  let nav = await utilities.getNav()
+  let selectList = await utilities.buildClassificationList()
+  res.render("./inventory/add-inventory", {
+      title: "Add Inventory",
+      nav,
+      selectList,
+      errors: null,
+  })
+}
+
+/* ***************************
  *  Build inventory by classification view
  * ************************** */
 invCont.buildByClassificationId = async function (req, res, next) {

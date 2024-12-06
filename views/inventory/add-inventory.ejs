@@ -18,7 +18,6 @@
         <p id="addInventoryParagraph">All fields are required.</p>
 
         <!-- Classification select -->
-        <label for="classification_id">Classification:</label><br>
         <%- selectList %><br>
 
         <!-- Make -->
@@ -31,7 +30,7 @@
 
         <!-- Description -->
         <label for="inv_description">Description:</label><br>
-        <textarea id="inv_description" name="inv_description" required value="<%= locals.inv_description %>"></textarea><br>
+        <textarea id="inv_description" name="inv_description" required></textarea><br>
 
         <!-- Image Path -->
         <label for="inv_image">Image Path:</label><br>
@@ -47,11 +46,11 @@
 
         <!-- Year -->
         <label for="inv_year">Year:</label><br>
-        <input type="number" id="inv_year" name="inv_year" required minlength="4" value="<%= locals.inv_year %>" placeholder="4-digit-year"><br>
+        <input type="number" id="inv_year" name="inv_year" required value="<%= locals.inv_year %>" placeholder="4-digit-year"><br>
 
         <!-- Miles -->
         <label for="inv_miles">Miles:</label><br>
-        <input type="number" id="inv_miles" name="inv_miles" required minlength="4" value="<%= locals.inv_miles %>" placeholder="Digits only"><br>
+        <input type="number" id="inv_miles" name="inv_miles" required value="<%= locals.inv_miles %>" placeholder="Digits only"><br>
 
         <!-- Color -->
         <label for="inv_color">Color:</label><br>

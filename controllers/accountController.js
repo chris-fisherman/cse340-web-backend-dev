@@ -32,6 +32,18 @@ async function buildRegister(req, res, next) {
 }
 
 /* ****************************************
+*  Management view delivering
+* *************************************** */
+async function buildManagement(req, res, next) {
+  let nav = await utilities.getNav()
+  res.render("account/management", {
+    title: "Account Management",
+    nav,
+    errors: null,
+  })
+}
+
+/* ****************************************
 *  Process Registration
 * *************************************** */
 async function registerAccount(req, res) {
@@ -119,4 +131,4 @@ async function accountLogin(req, res) {
   }
 }
 
-module.exports = { buildLogin, buildRegister, registerAccount, accountLogin }
+module.exports = { buildLogin, buildRegister, buildManagement, registerAccount, accountLogin }

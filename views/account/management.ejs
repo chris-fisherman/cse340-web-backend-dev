@@ -1,0 +1,17 @@
+<% if (title) { %>
+    <h1 id="accManagementTitle"><%= title %></h1>
+
+    <%- messages() %>
+
+    <% if (errors) { %>
+        <ul class="notice">
+            <% errors.array().forEach(error => { %>
+                <li><%= error.msg %></li>
+            <% })%>
+        </ul>
+    <% } %>
+
+    <p id="accManagementText">You're logged in!</p>
+<% } else {
+    res.redirect('/')
+} %>

@@ -3,10 +3,26 @@
 
     <%- messages() %>
 
+    <!-- Add news -->
     <ul id="managementList">
         <li class="managementItems"><a class="managementLinks" href="/inv/new-class">Add new classification</a></li>
         <li class="managementItems"><a class="managementLinks" href="/inv/add-inventory">Add new inventory</a></li>
     </ul>
+
+    <!-- Manage inventory -->
+    <h2>Manage Inventory</h2>
+    <p>Choose a classification to see those inventory items.</p>
+
+    <!-- classification select -->
+    <%- classificationSelect %>
+
+    <!-- inventory display -->
+    <table id="inventoryDisplay"></table>
+
+    <!-- message display -->
+    <noscript>JavaScript must be enabled to use this page.</noscript>
+
+    <script src="../../js/inventory.js"></script>
 <% } else {
     res.redirect('/')
 } %>

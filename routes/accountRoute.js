@@ -28,6 +28,10 @@ router.post(
 )
 
 // Account route
-router.get("/", utilities.handleErrors(accountController.buildManagement));
+router.get(
+    "/", 
+    utilities.checkLogin,
+    utilities.handleErrors(accountController.buildManagement)
+);
 
 module.exports = router;

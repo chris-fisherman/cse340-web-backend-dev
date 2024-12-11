@@ -5,12 +5,13 @@ const utilities = require("../utilities/")
 const accountController = require("../controllers/accountController")
 const regValidate = require('../utilities/account-validation')
 
-// My account route
+// Login route
 router.get("/login", utilities.handleErrors(accountController.buildLogin));
 
 // Register route
+// get
 router.get("/register", utilities.handleErrors(accountController.buildRegister));
-// Register route
+// post
 router.post(
     "/register",
     regValidate.registationRules(),
@@ -18,12 +19,15 @@ router.post(
     utilities.handleErrors(accountController.registerAccount)
 );
 
-// Process the login attempt
+// Login process
 router.post(
     "/login",
     regValidate.loginRules(),
     regValidate.checkLogData,
     utilities.handleErrors(accountController.accountLogin)
 )
+
+// Account route
+router.get("/", utilities.handleErrors(accountController.buildManagement));
 
 module.exports = router;

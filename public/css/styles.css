@@ -145,7 +145,7 @@
 .upgradesItems {
   text-align: center;
 }
-.upgradesItems p {
+.upgradesItems p, #accManagementText {
   font-size: var(--content-size);
   font-weight: var(--content-weight);
 }
@@ -343,7 +343,7 @@ input#classification_name {
 }
 
 /* --------------- VEHICLE MANAGEMENT --------------- */
-#managementTitle {
+#managementTitle, #accManagementTitle {
   font-size: var(--title-size);
   font-weight: var(--title-weight);
   margin-top: 30px;
@@ -481,7 +481,7 @@ input#classification_name {
   }
 
   /* VEHICLE MANAGEMENT */
-  #managementTitle {
+  #managementTitle, #accManagementTitle {
     font-size: 28px;
   }
 }

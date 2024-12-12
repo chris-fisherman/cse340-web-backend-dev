@@ -1,5 +1,5 @@
 <% if (title) { %>
-    <h1 id="managementTitle"><%= title %></h1>
+    <h1 class="managementTitle"><%= title %></h1>
 
     <%- messages() %>
 
@@ -10,8 +10,8 @@
     </ul>
 
     <!-- Manage inventory -->
-    <h2>Manage Inventory</h2>
-    <p>Choose a classification to see those inventory items.</p>
+    <h2 class="managementTitle">Manage Inventory</h2>
+    <p id="managementInvP">Choose a classification to see those inventory items.</p>
 
     <!-- classification select -->
     <%- classificationSelect %>

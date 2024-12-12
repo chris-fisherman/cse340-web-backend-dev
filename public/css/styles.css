@@ -343,7 +343,7 @@ input#classification_name {
 }
 
 /* --------------- VEHICLE MANAGEMENT --------------- */
-#managementTitle, #accManagementTitle {
+.managementTitle, #accManagementTitle {
   font-size: var(--title-size);
   font-weight: var(--title-weight);
   margin-top: 30px;
@@ -353,6 +353,33 @@ input#classification_name {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+#managementInvP {
+  padding-left: 40px;
+}
+.classificationList, #classificationList {
+  margin-left: 40px;
+  font-size: var(--content-size);
+  font-weight: var(--title-weight);
+}
+select.classificationList {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: var(--content-weight);
+}
+#inventoryDisplay {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  border: solid 1px #000;
+  padding: 10px;
+}
+#inventoryDisplay thead {
+  background-color: var(--content-color);
+  color: #fff;
+  font-size: var(--content-size);
+  font-weight: var(--content-weight);
 }
 
 /* --------------- FOOTER --------------- */
@@ -481,7 +508,7 @@ input#classification_name {
   }
 
   /* VEHICLE MANAGEMENT */
-  #managementTitle, #accManagementTitle {
+  .managementTitle, #accManagementTitle {
     font-size: 28px;
   }
 }

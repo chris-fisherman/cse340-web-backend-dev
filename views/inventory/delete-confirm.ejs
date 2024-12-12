@@ -1,0 +1,64 @@
+<% if (title) { %>
+    <h1 id="addInventoryTitle"><%= title %></h1>
+
+    <%- messages() %>
+
+    <% if (errors) { %>
+        <ul class="notice">
+       <% errors.array().forEach(error => { %>
+         <li><%= error.msg %></li>
+      <%  }) %>
+       </ul>
+      <% } %>
+
+    <form id="addInventoryForm" action="/inv/delete-confirm" method="post">
+
+        <!-- Warning text -->
+        <p>Confirm Deletion - The delete is permanent.</p>
+
+        <!-- Make -->
+        <label for="inv_make">Make:</label><br>
+        <input type="text" id="inv_make" name="inv_make" readonly required minlength="3" value="<%= locals.inv_make %>" placeholder="Min of 3 characters"
+        <% if(locals.inv_make) { %> 
+            value="<%= locals.inv_make %>"
+        <% } %>><br>
+
+        <!-- Model -->
+        <label for="inv_model">Model:</label><br>
+        <input type="text" id="inv_model" name="inv_model" readonly required minlength="3" value="<%= locals.inv_model %>" placeholder="Min of 3 characters"
+        <% if(locals.inv_model) { %> 
+            value="<%= locals.inv_model %>"
+        <% } %>><br>
+
+        <!-- Price -->
+        <label for="inv_price">Price:</label><br>
+        <input type="number" id="inv_price" name="inv_price" readonly required step="any" value="<%= locals.inv_price %>" placeholder="Decimal or integer"
+        <% if(locals.inv_price) { %> 
+            value="<%= locals.inv_price %>"
+        <% } %>><br>
+
+        <!-- Year -->
+        <label for="inv_year">Year:</label><br>
+        <input type="number" id="inv_year" name="inv_year" readonly required value="<%= locals.inv_year %>" placeholder="4-digit-year"
+        <% if(locals.inv_year) { %> 
+            value="<%= locals.inv_year %>"
+        <% } %>><br>
+        
+        <!-- SUBMIT -->
+        <div id="loginBtnContainer">
+            <input id="loginInput" type="submit" value="Delete">
+        </div>
+
+        <!-- Hidden -->
+        <input type="hidden" name="inv_id"
+        <% if(locals.inv_id) { %> 
+            value="<%= locals.inv_id %>"
+        <% } %>>
+
+        
+
+    </form>
+
+<% } else {
+    res.redirect('/')
+} %>

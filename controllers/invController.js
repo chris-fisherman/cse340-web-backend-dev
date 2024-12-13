@@ -8,13 +8,45 @@ const invCont = {}
  * ************************** */
 invCont.buildManageInv = async function (req, res, next) {
     let nav = await utilities.getNav()
+
+    const accountData = res.locals.accountData
+    const loggedin = res.locals.loggedin
+
     const classificationSelect = await utilities.buildClassificationList()
-    res.render("./inventory/management", {
-        title: "Vehicle Management",
-        nav,
-        classificationSelect,
-        errors: null,
-    })
+
+    if (loggedin) {
+      if (accountData.account_type === "Employee" || accountData.account_type === "Admin") {
+        res.render("./inventory/management", {
+          title: "Vehicle Management",
+          nav,
+          classificationSelect,
+          accountData,
+          errors: null,
+        })
+      }  else { 
+        req.flash(
+          "notice",
+          `You do not have permission to access this section.`
+        )
+        res.redirect('/account/login/')
+      }
+    }  else { 
+      req.flash(
+        "notice",
+        `You must be logged to access the inventory management. Please log in.`
+      )
+      res.redirect('/account/login/')
+    }
+
+    
+
+    // res.render("./inventory/management", {
+    //     title: "Vehicle Management",
+    //     nav,
+    //     classificationSelect,
+    //     accountData,
+    //     errors: null,
+    // })
 }
 
 /* ***************************

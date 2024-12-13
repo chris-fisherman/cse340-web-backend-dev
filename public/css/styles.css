@@ -48,6 +48,13 @@
   text-decoration-line: none;
   color: var(--content-color);
 }
+a#welcomeLink {
+  font-weight: 500;
+  margin-right: 3%;
+}
+a#logoutLink:hover, a#welcomeLink:hover {
+  text-decoration-line: underline;
+}
 
 /* --------------- NAVIGATION --------------- */
 #nav {
@@ -425,6 +432,9 @@ select.classificationList {
   /* HEADER */
   #siteName a {
     font-size: 32px;
+  }
+  a#welcomeLink {
+    margin-right: 20px;
   }
 
   /* NAVIGATION */

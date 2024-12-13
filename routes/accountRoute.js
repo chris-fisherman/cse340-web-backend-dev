@@ -34,4 +34,24 @@ router.get(
     utilities.handleErrors(accountController.buildManagement)
 );
 
+// Edit account route
+// get
+router.get(
+    "/edit/:account_id", 
+    utilities.handleErrors(accountController.buildEditAccount)
+);
+// post
+router.post(
+    "/update-data",
+    regValidate.updateRules(),
+    regValidate.checkUpdateData,
+    utilities.handleErrors(accountController.updateAccountData)
+);
+// post
+router.post(
+    "/change-password",
+    regValidate.passwordRules(),
+    utilities.handleErrors(accountController.changePassword)
+);
+
 module.exports = router;

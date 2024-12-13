@@ -10,8 +10,16 @@
             <% })%>
         </ul>
     <% } %>
+    
+    <% if (accountData) { %>
+        <h3 id="accManagementWelcome">Welcome, <%= accountData.account_firstname %>.</h3>
 
-    <p id="accManagementText">You're logged in!</p>
+        <p id="accManagementText">You're logged in!</p>
+
+    <% } else { %>
+        <p>You must log in to view this page.</p>
+    <% } %>
+
 <% } else {
     res.redirect('/')
 } %>

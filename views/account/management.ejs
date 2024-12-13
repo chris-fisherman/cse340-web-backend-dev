@@ -16,6 +16,14 @@
 
         <p id="accManagementText">You're logged in!</p>
 
+        <a id="editAccInfoLink" href="/account/edit">Edit Account Information</a>
+
+        <% if (accountData.account_type === "Employee" || accountData.account_type === "Admin") { %>
+            <h3>Inventory Management</h3>
+
+            <a href="/inv/">Manage Inventory</a>
+        <% } %>
+
     <% } else { %>
         <p>You must log in to view this page.</p>
     <% } %>

@@ -3,20 +3,20 @@
 
     <%- messages() %>
 
-    <% if (errors) { %>
+    <!-- <%# if (errors) { %>
         <ul class="notice">
-            <% errors.array().forEach(error => { %>
-                <li><%= error.msg %></li>
-            <% })%>
+            <%# errors.array().forEach(error => { %>
+                <li><%#= error.msg %></li>
+            <%# })%>
         </ul>
-    <% } %>
+    <%# } %> -->
     
     <% if (accountData) { %>
         <h3 id="accManagementWelcome">Welcome, <%= accountData.account_firstname %>.</h3>
 
         <p id="accManagementText">You're logged in!</p>
 
-        <a id="editAccInfoLink" href="/account/edit">Edit Account Information</a>
+        <a id="editAccInfoLink" href="/account/edit/<%= accountData.account_id %>">Edit Account Information</a>
 
         <% if (accountData.account_type === "Employee" || accountData.account_type === "Admin") { %>
             <h3>Inventory Management</h3>

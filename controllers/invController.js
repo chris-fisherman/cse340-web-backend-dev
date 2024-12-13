@@ -38,8 +38,6 @@ invCont.buildManageInv = async function (req, res, next) {
       res.redirect('/account/login/')
     }
 
-    
-
     // res.render("./inventory/management", {
     //     title: "Vehicle Management",
     //     nav,

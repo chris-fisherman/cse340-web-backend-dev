@@ -114,6 +114,30 @@ Util.buildClassificationList = async function (classification_id = null) {
     return classificationList
 }
 
+/* ************************
+ * ClassificationTable
+ ************************** */
+Util.buildClassificationTable = async function (req, res, next) {
+
+    let data = await invModel.getClassifications()
+
+    let classificationTable = '<thead>'; 
+    classificationTable += '<tr><th>Classification Name</th><td>&nbsp;</td><td>&nbsp;</td></tr>'; 
+    classificationTable += '</thead>'; 
+
+    classificationTable += '<tbody>'; 
+
+    data.rows.forEach(function (row) { 
+        classificationTable += `<tr><td>${row.classification_name}</td>`; 
+        classificationTable += `<td><a href='/account/delete-classification/${row.classification_id}' title='Click to delete'>Delete</a></td>`; 
+        classificationTable += `<td><a href='/account/edit-classification/${row.classification_id}' title='Click to edit'>Edit</a></td></tr>`; 
+    }) 
+    classificationTable += '</tbody>'; 
+
+    return classificationTable
+
+}
+
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 

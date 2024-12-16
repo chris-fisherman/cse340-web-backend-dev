@@ -13,6 +13,7 @@ invCont.buildManageInv = async function (req, res, next) {
     const loggedin = res.locals.loggedin
 
     const classificationSelect = await utilities.buildClassificationList()
+    const classificationTable = await utilities.buildClassificationTable()
 
     if (loggedin) {
       if (accountData.account_type === "Employee" || accountData.account_type === "Admin") {
@@ -20,6 +21,7 @@ invCont.buildManageInv = async function (req, res, next) {
           title: "Vehicle Management",
           nav,
           classificationSelect,
+          classificationTable,
           accountData,
           errors: null,
         })

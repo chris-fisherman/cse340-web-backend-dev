@@ -376,6 +376,20 @@ select.classificationList {
   border-radius: 5px;
   font-weight: var(--content-weight);
 }
+#deleteClassificationItem {
+  text-decoration-line: underline;
+  color: rgb(206, 38, 38);
+}
+#deleteClassificationItem:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+#classificationDisplay {
+  display: none;
+}
+#classificationDisplay.show {
+  display: block;
+}
 #inventoryDisplay {
   margin-left: 40px;
   margin-bottom: 30px;

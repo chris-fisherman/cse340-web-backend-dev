@@ -156,4 +156,25 @@ async function deleteInventoryItem(inv_id) {
     }
 }
 
-module.exports = {getClassifications, getInventoryByClassificationId, getInventoryByInvId, insertClassification, insertInventory, updateInventory, deleteInventoryItem}
+/* ***************************
+ *  Get classification_name by classification_id
+ * ************************** */
+async function getClassificationName(classification_id) {
+    return await pool.query(`SELECT classification_name FROM public.classification WHERE classification_id = ${classification_id}`)
+}
+
+/* ***************************
+ *  Edit Classification Name
+ * ************************** */
+async function editClassificationName(classification_name, classification_id) {
+    return await pool.query(`UPDATE public.classification SET classification_name = '${classification_name}' WHERE classification_id = ${classification_id}`)
+}
+
+/* ***************************
+ *  Delete Classification
+ * ************************** */
+async function deleteClassification(classification_id) {
+    return await pool.query(`DELETE FROM public.classification WHERE classification_id = ${classification_id}`)
+}
+
+module.exports = {getClassifications, getInventoryByClassificationId, getInventoryByInvId, insertClassification, insertInventory, updateInventory, deleteInventoryItem, getClassificationName, editClassificationName, deleteClassification}

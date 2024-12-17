@@ -1,0 +1,29 @@
+<% if (title) { %>
+    <h1 id="addClassificationTitle"><%= title %></h1>
+
+    <%- messages() %>
+
+    <% if (errors) { %>
+        <ul class="notice">
+       <% errors.array().forEach(error => { %>
+         <li><%= error.msg %></li>
+      <%  }) %>
+       </ul>
+      <% } %>
+
+    <form id="addClassificationForm" action="/inv/edit-classification/" method="post">
+        <label for="classification_id">Classification ID (not editable):</label><br>
+        <input type="text" id="classification_id" name="classification_id" required readonly value="<%= classificationID %>"><br>
+
+        <label for="classification_name">Type the new classification name:</label><br>
+        <input type="text" id="classification_name" name="classification_name" required pattern="[^' ']+[a-zA-Z]+" value="<%= locals.classification_name %>"><br>
+
+        <p id="addClassificationParagraph">Name must be alphabetic characters only.</p>
+        
+        <div id="loginBtnContainer">
+            <input id="loginInput" type="submit" value="Edit Classification name">
+        </div>
+    </form>
+<% } else {
+    res.redirect('/')
+} %>

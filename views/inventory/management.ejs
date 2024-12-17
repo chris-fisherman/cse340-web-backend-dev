@@ -7,8 +7,13 @@
     <ul id="managementList">
         <li class="managementItems"><a class="managementLinks" href="/inv/new-class">Add new classification</a></li>
         <li class="managementItems"><a class="managementLinks" href="/inv/add-inventory">Add new inventory</a></li>
-        <li class="managementItems"><a class="managementLinks" href="/inv/delete-classification">Delete Classification</a></li>
+        <li class="managementItems" id="deleteClassificationItem" title="Click to display classifications">Delete classification</li>
     </ul>
+
+        <!-- classification display -->
+        <table id="classificationDisplay">
+            <%- classificationTable %>
+        </table>
 
     <!-- Manage inventory -->
     <h2 class="managementTitle">Manage Inventory</h2>
@@ -24,6 +29,7 @@
     <noscript>JavaScript must be enabled to use this page.</noscript>
 
     <script src="../../js/inventory.js"></script>
+    <script src="../../js/show-classificationTable.js"></script>
 <% } else {
     res.redirect('/')
 } %>

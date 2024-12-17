@@ -376,13 +376,30 @@ select.classificationList {
   border-radius: 5px;
   font-weight: var(--content-weight);
 }
-#inventoryDisplay {
+#deleteClassificationItem {
+  text-decoration-line: underline;
+  color: rgb(206, 38, 38);
+}
+#deleteClassificationItem:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+#classificationDisplay {
+  display: none;
+}
+#classificationDisplay.show {
+  display: block;
+}
+#classificationDisplay {
+  width: fit-content;
+}
+#inventoryDisplay, #classificationDisplay {
   margin-left: 40px;
   margin-bottom: 30px;
   border: solid 1px #000;
   padding: 10px;
 }
-#inventoryDisplay thead {
+#inventoryDisplay thead, #classificationDisplay thead {
   background-color: var(--content-color);
   color: #fff;
   font-size: var(--content-size);

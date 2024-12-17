@@ -1,9 +1,16 @@
 <% if (title) { %>
     <h1 id="invTitle"><%= title %></h1>
+
+    <%- messages() %>
+
+    <% if (data == 0) { %>
+        <p>No vehicles found.</p>
+    <% } else { %>
+        <%- grid %>
+    <% } %>
 <% } else {
     res.redirect('/')
 } %>
 
-<%# messages() %>
 
-<%- grid %>
+

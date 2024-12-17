@@ -67,4 +67,28 @@ router.post(
     utilities.handleErrors(invController.confirmDeleteInventory)
 )
 
+// Edit classification route
+// get
+router.get(
+    "/edit-classification/:classification_id", 
+    utilities.handleErrors(invController.buildEditClassification)
+)
+// post
+router.post(
+    "/edit-classification/", 
+    utilities.handleErrors(invController.editClassification)
+)
+
+// Delete classification route
+// get
+router.get(
+    "/delete-classification/:classification_id", 
+    utilities.handleErrors(invController.buildDeleteClassification)
+)
+// post
+router.post(
+    "/delete-classification/", 
+    utilities.handleErrors(invController.deleteClassification)
+)
+
 module.exports = router;

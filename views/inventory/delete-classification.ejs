@@ -1,0 +1,27 @@
+<% if (title) { %>
+    <h1 id="addClassificationTitle"><%= title %></h1>
+
+    <%- messages() %>
+
+    <% if (errors) { %>
+        <ul class="notice">
+       <% errors.array().forEach(error => { %>
+         <li><%= error.msg %></li>
+      <%  }) %>
+       </ul>
+      <% } %>
+
+    <form id="addClassificationForm" action="/inv/delete-classification/" method="post">
+        <label for="classification_id">Classification ID (not editable):</label><br>
+        <input type="text" id="classification_id" name="classification_id" required readonly value="<%= classificationID %>"><br>
+
+        <label for="classification_name">Classification name (not editable):</label><br>
+        <input type="text" id="classification_name" name="classification_name" required readonly pattern="[^' ']+[a-zA-Z]+" value="<%= classificationNameText %>"><br>
+        
+        <div id="loginBtnContainer">
+            <input id="loginInput" type="submit" value="Delete Classification">
+        </div>
+    </form>
+<% } else {
+    res.redirect('/')
+} %>

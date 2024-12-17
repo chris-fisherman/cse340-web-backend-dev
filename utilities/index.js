@@ -129,8 +129,8 @@ Util.buildClassificationTable = async function (req, res, next) {
 
     data.rows.forEach(function (row) { 
         classificationTable += `<tr><td>${row.classification_name}</td>`; 
-        classificationTable += `<td><a href='/account/delete-classification/${row.classification_id}' title='Click to delete'>Delete</a></td>`; 
-        classificationTable += `<td><a href='/account/edit-classification/${row.classification_id}' title='Click to edit'>Edit</a></td></tr>`; 
+        classificationTable += `<td><a href='/inv/delete-classification/${row.classification_id}' title='Click to delete'>Delete</a></td>`; 
+        classificationTable += `<td><a href='/inv/edit-classification/${row.classification_id}' title='Click to edit'>Edit</a></td></tr>`; 
     }) 
     classificationTable += '</tbody>'; 
 
